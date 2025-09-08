@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unisex Acid Washed Oversized Tee	Maroon - Velvet Horizon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Velvet Horizon</h1>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="#">Contact</a>
+        <a href="#">Account</a>
+        <a href="#" id="cart-link">Cart 🛒 <span id="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-detail">
+    <div class="product-detail-container">
+      <img src="images/product4.jpg" alt="Velvet Dress" />
+      <div class="product-info">
+        <h2>Unisex Acid Washed Oversized Tee	Maroon</h2>
+        <p class="price">₹599</p>
+        <p class="desc">A luxurious velvet dress designed to turn heads. Soft, stylish, and timeless — perfect for every elegant occasion.
+            
+        </p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const cart = [];
+    const cartCount = document.getElementById('cart-count');
+    const addBtn = document.querySelector('.add-btn');
+
+    addBtn.addEventListener('click', () => {
+      const product = {
+        name: "Unisex Acid Washed Oversized Tee	Maroon",
+        price: "₹599",
+        image: "images/product4.jpg"
+      };
+      cart.push(product);
+      cartCount.textContent = cart.length;
+      alert(`${product.name} added to cart!`);
+    });
+  </script>
+
+</body>
+</html>
